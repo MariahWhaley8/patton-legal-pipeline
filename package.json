@@ -1,0 +1,21 @@
+{
+  "name": "patton-legal-drive-pipeline",
+  "version": "1.0.0",
+  "description": "Pulls new files from a Google Drive folder every 6 hours, extracts case data via Claude, and serves the merged dataset as JSON for the Legal Cases Dashboard.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "run-once": "node lib/runPipeline.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "express": "^4.19.2",
+    "googleapis": "^144.0.0",
+    "node-cron": "^3.0.3",
+    "pdf-parse": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
